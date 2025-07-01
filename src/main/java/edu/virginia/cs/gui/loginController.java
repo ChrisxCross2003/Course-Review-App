@@ -44,12 +44,13 @@ public class loginController {
                 Login.goToMainMenu(username, password);
                 switchToMainMenuFromLogin(actionEvent);
             } else {
+                loginErrorLabel.setText("Username or Password is incorrect!");
                 loginErrorLabel.setVisible(true);
             }
         }
     }
     public void switchToMainMenuFromLogin(ActionEvent actionEvent) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("edu.virginia.cs.gui/main_menu.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/edu/virginia/cs/gui/main_menu.fxml")));
         stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Main Menu");
@@ -58,7 +59,7 @@ public class loginController {
     }
 
     public void switchToCreateAccountFromLogin(ActionEvent actionEvent) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("edu.virginia.cs.gui/createAccount.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/edu/virginia/cs/gui/createAccount.fxml")));
         stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Create New Account");

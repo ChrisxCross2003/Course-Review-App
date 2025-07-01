@@ -59,7 +59,7 @@ public class mainMenuController implements Initializable {
     }
 
     private void changeScene(ActionEvent actionEvent, String newSceneLocation, String title) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("edu.virginia.cs.gui/"+newSceneLocation)));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/edu/virginia/cs/gui/"+newSceneLocation)));
         stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle(title);

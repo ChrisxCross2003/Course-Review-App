@@ -36,7 +36,7 @@ public class createAccountController {
     private Parent root;
     Login login = new Login();
     public void back(ActionEvent actionEvent) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("edu.virginia.cs.gui/log_in_screen.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/edu/virginia/cs/gui/log_in_screen.fxml")));
         stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Login");
@@ -69,7 +69,7 @@ public class createAccountController {
         }
     }
     public void switchToMainMenuFromCreateAccount(ActionEvent actionEvent) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("edu.virginia.cs.gui/main_menu.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/edu/virginia/cs/gui/main_menu.fxml")));
         stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Main Menu");
