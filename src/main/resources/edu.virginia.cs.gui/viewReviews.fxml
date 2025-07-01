@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="399.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.virginia.cs.gui.reviewsController">
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#232d4b" height="400.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="407.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e57200" height="284.0" layoutX="14.0" layoutY="109.0" stroke="BLACK" strokeType="INSIDE" width="379.0" />
+    <Text fill="WHITE" layoutX="27.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VIEW A COURSE'S REVIEWS" textAlignment="CENTER">
+        <font>
+            <Font name="Times New Roman" size="27.0" />
+        </font>
+    </Text>
+    <ListView fx:id="reviewList" layoutX="22.0" layoutY="178.0" prefHeight="174.0" prefWidth="364.0" />
+    <Text fill="WHITE" layoutX="96.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select a course below to view its Reviews" />
+    <Text layoutX="102.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Average:">
+        <font>
+          <Font name="Franklin Gothic Demi Cond" size="25.0" />
+        </font>
+    </Text>
+    <Label fx:id="courseAverage" layoutX="271.0" layoutY="118.0" text="  N/A" textAlignment="CENTER">
+        <font>
+          <Font name="Franklin Gothic Demi Cond" size="23.0" />
+        </font>
+    </Label>
+    <Text layoutX="174.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reviews">
+        <font>
+          <Font name="Franklin Gothic Demi Cond" size="20.0" />
+        </font>
+    </Text>
+    <Button fx:id="returnMainMenuButton" layoutX="139.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchToMainMenuFromViewReviews" text="Return to Main Menu" />
+   <ComboBox fx:id="selectCourseBox" layoutX="129.0" layoutY="70.0" onAction="#getReviews" prefWidth="150.0" />
+</AnchorPane>

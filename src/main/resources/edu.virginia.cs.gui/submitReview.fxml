@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="399.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.virginia.cs.gui.submitReviewController">
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#232d4b" height="400.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="407.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e57200" height="302.0" layoutX="26.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="351.0" />
+    <Text fill="WHITE" layoutX="63.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUBMIT A REVIEW" textAlignment="CENTER">
+        <font>
+            <Font name="Times New Roman" size="30.0" />
+        </font>
+    </Text>
+    <TextField fx:id="courseField" layoutX="58.0" layoutY="156.0" prefHeight="25.0" prefWidth="290.0" />
+    <Text layoutX="60.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Specify which class you wish to write a review for" textAlignment="CENTER">
+        <font>
+            <Font name="Arial Narrow" size="16.0" />
+        </font>
+    </Text>
+    <TextField fx:id="messageField" layoutX="57.0" layoutY="218.0" prefHeight="25.0" prefWidth="290.0" />
+    <Button fx:id="submitReviewButton" layoutX="79.0" layoutY="347.0" mnemonicParsing="false" onAction="#submitReview" text="Submit Review">
+        <font>
+            <Font name="Eras Medium ITC" size="12.0" />
+        </font>
+    </Button>
+    <Text layoutX="40.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Answer the Prompts to submit a review" textAlignment="CENTER">
+        <font>
+            <Font name="Franklin Gothic Demi" size="16.0" />
+        </font>
+    </Text>
+    <Label fx:id="submitErrorLabel" layoutX="51.0" layoutY="318.0" text="Invalid Course! Accepted Format: [XXXX 0000]" textAlignment="CENTER" textFill="#050a65" visible="false">
+      <font>
+         <Font size="15.0" />
+      </font>
+    </Label>
+    <Text layoutX="56.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Write a brief message about your class experience" textAlignment="CENTER">
+        <font>
+          <Font name="Arial Narrow" size="16.0" />
+        </font>
+    </Text>
+    <Text layoutX="98.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rate your class experience out of 5" textAlignment="CENTER">
+        <font>
+          <Font name="Arial Narrow" size="16.0" />
+        </font>
+    </Text>
+    <ChoiceBox fx:id="ratingBox" layoutX="126.0" layoutY="280.0" prefWidth="150.0" />
+    <Button fx:id="submitReviewButton1" layoutX="279.0" layoutY="347.0" mnemonicParsing="false" onAction="#switchToMainMenuFromSubmitReview" text="Back">
+        <font>
+          <Font name="Eras Medium ITC" size="12.0" />
+        </font>
+    </Button>
+</AnchorPane>
