@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Objects;
 
 public class reviewsApplication extends Application {
@@ -22,7 +23,7 @@ public class reviewsApplication extends Application {
             dl.connect();
 //            dl.printData();
             Login.setDataLayer(dl);
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("edu.virginia.cs.gui/log_in_screen.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/edu/virginia/cs/gui/log_in_screen.fxml")));
             Scene scene = new Scene(root);
             stage.setTitle("Course Reviews");
             stage.setScene(scene);
